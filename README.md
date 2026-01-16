@@ -9,6 +9,13 @@
 
 **Are You Alive** is a "Dead Man's Switch" application designed to ensure your safety. It consists of an Android client and a Node.js backend server. The app regularly sends "heartbeats" to verify that you are active. If you fail to use your phone for a set period (e.g., due to an accident or emergency), the server will automatically send help emails to your emergency contacts.
 
+### 📸 Screenshots
+
+| Home Screen | Settings | Emergency Alert |
+| :---: | :---: | :---: |
+| ![Home](docs/screenshots/home.png) | ![Settings](docs/screenshots/settings.png) | ![Alert](docs/screenshots/alert.png) |
+
+
 ### Key Features
 
 *   **Client-Server Architecture**: Unlike purely local apps, the server-side monitoring ensures alerts are sent even if your phone is broken, out of battery, or lost.
@@ -79,6 +86,13 @@
 ## 🇨🇳 中文
 
 **活着吗 (Are You Alive)** 是一款“死人开关 (Dead Man's Switch)” 类型的安全应用。它由 Android 客户端和 Node.js 后端服务器组成。App 会定期向服务器发送“心跳”以证明你还活跃。如果你在设定的时间内没有使用手机（例如发生了意外或紧急情况），服务端将自动向你的紧急联系人发送求助邮件。
+
+### 📸 截图展示
+
+| 主页 | 设置页 | 紧急预警 |
+| :---: | :---: | :---: |
+| ![主页](docs/screenshots/home.png) | ![设置](docs/screenshots/settings.png) | ![预警](docs/screenshots/alert.png) |
+
 
 ### 主要功能
 
