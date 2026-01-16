@@ -13,7 +13,7 @@
 
 | Home Screen | Settings | Emergency Alert |
 | :---: | :---: | :---: |
-| ![Home](docs/screenshots/home.png) | ![Settings](docs/screenshots/settings.png) | ![Alert](docs/screenshots/alert.png) |
+| <img src="docs/screenshots/home.png" width="200"> | <img src="docs/screenshots/settings.png" width="200"> | <img src="docs/screenshots/alert.png" width="200"> |
 
 
 ### Key Features
@@ -28,14 +28,13 @@
 
 ### How it Works (Detection Principles)
 
-23: 
-24: The app employs multiple layers of detection to ensure accuracy and power efficiency:
-25: 1.  **Screen Interaction**: Monitors `ACTION_USER_PRESENT` (unlock) and `ACTION_SCREEN_ON` events via a BroadcastReceiver.
-26: 2.  **Physical Activity**: Uses the `STEP_COUNTER` sensor to detect movement. If you are walking with your phone in your pocket, it counts as activity even if the screen stays off.
-27: 3.  **App Interactivity**: While the app is in the foreground, it periodically refreshes the active state.
-28: 4.  **Dual Sync Strategy**:
-29:     *   **Immediate**: Syncs heartbeat immediately upon screen interaction.
-30:     *   **Periodic**: `WorkManager` runs every 15 minutes (configurable) as a fail-safe to sync movement data or perform checks.
+The app employs multiple layers of detection to ensure accuracy and power efficiency:
+1.  **Screen Interaction**: Monitors `ACTION_USER_PRESENT` (unlock) and `ACTION_SCREEN_ON` events via a BroadcastReceiver.
+2.  **Physical Activity**: Uses the `STEP_COUNTER` sensor to detect movement. If you are walking with your phone in your pocket, it counts as activity even if the screen stays off.
+3.  **App Interactivity**: While the app is in the foreground, it periodically refreshes the active state.
+4.  **Dual Sync Strategy**:
+    *   **Immediate**: Syncs heartbeat immediately upon screen interaction.
+    *   **Periodic**: `WorkManager` runs every 15 minutes (configurable) as a fail-safe to sync movement data or perform checks.
 
 ### Structure
 
@@ -91,7 +90,7 @@
 
 | 主页 | 设置页 | 紧急预警 |
 | :---: | :---: | :---: |
-| ![主页](docs/screenshots/home.png) | ![设置](docs/screenshots/settings.png) | ![预警](docs/screenshots/alert.png) |
+| <img src="docs/screenshots/home.png" width="200"> | <img src="docs/screenshots/settings.png" width="200"> | <img src="docs/screenshots/alert.png" width="200"> |
 
 
 ### 主要功能
@@ -106,14 +105,13 @@
 
 ### 检测原理
 
-79: 
-80: App 通过多维度并发检测，确保活跃状态捕获的准确性与省电：
-81: 1.  **屏幕交互监测**: 通过 `KeepAliveReceiver` 监听系统的“解锁屏幕”和“点亮屏幕”事件。
-82: 2.  **运动状态监测**: 调用系统的 `STEP_COUNTER` (计步) 传感器。即使手机装在兜里未点亮屏幕，只要步数在增加，即判定为人还在。
-83: 3.  **应用内交互**: App 处于前台使用时，会自动持续刷新活跃时间。
-84: 4.  **双重同步策略**:
-85:     *   **即时同步**: 监听到屏幕交互后，立即尝试触发一次心跳上报。
-86:     *   **周期同步**: 利用 `WorkManager` 每 15 分钟（可调）进行一次保底检测与状态同步。
+App 通过多维度并发检测，确保活跃状态捕获的准确性与省电：
+1.  **屏幕交互监测**: 通过 `KeepAliveReceiver` 监听系统的“解锁屏幕”和“点亮屏幕”事件。
+2.  **运动状态监测**: 调用系统的 `STEP_COUNTER` (计步) 传感器。即使手机装在兜里未点亮屏幕，只要步数在增加，即判定为人还在。
+3.  **应用内交互**: App 处于前台使用时，会自动持续刷新活跃时间。
+4.  **双重同步策略**:
+    *   **即时同步**: 监听到屏幕交互后，立即尝试触发一次心跳上报。
+    *   **周期同步**: 利用 `WorkManager` 每 15 分钟（可调）进行一次保底检测与状态同步。
 
 ### 项目结构
 
