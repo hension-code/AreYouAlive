@@ -1,0 +1,35 @@
+package com.example.areyoualive
+
+/**
+ * [TEMPLATE] Global Configuration
+ * 
+ * INSTRUCTIONS:
+ * 1. Rename this file to "AppConfig.kt" (remove .example extension).
+ * 2. Update the values below with your actual server configuration.
+ */
+object AppConfig {
+    /**
+     * Default Server URL
+     * Replace with your domain, e.g., "https://your-domain.com"
+     */
+    const val DEFAULT_SERVER_URL = "https://your-api-domain.com"
+
+        /**
+     * 默认超时时长（小时）
+     */
+    const val DEFAULT_TIMEOUT_HOURS = 24
+
+    /**
+     * 后台任务检测周期（分钟）
+     * 注意：WorkManager 规定最小周期为 15 分钟
+     */
+    const val CHECK_INTERVAL_MINUTES = 15L
+
+    /**
+     * 本地提前预警时间（分钟）
+     * 在达到超时时间前，提前多久弹出紧急确认窗口
+     */
+    const val ADVANCE_WARNING_MINUTES = 30L
+    
+    // Add other global configs here if needed
+}

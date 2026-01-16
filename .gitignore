@@ -1,0 +1,26 @@
+# Android
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+captures/
+*.iml
+.externalNativeBuild
+.cxx
+.google_services.json
+android/app/src/main/java/com/example/areyoualive/AppConfig.kt
+
+
+# Node backend
+server/node_modules/
+server/.env
+server/database.sqlite
+server/logs/
+
+# General
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.log
